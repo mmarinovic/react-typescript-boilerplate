@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "traceResolution": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "es2017",
+      "dom",
+    ],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "strictFunctionTypes": false,
+    "esModuleInterop": true
+  },
+  "typeRoots": [
+    "src/shared/types/modules",
+    "node_modules/@types"
+  ],
+  "include": [
+    "src/**/*",
+    "webpack/**/*"
+  ]
+}

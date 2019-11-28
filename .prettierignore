@@ -1,0 +1,10 @@
+.vscode-template
+*.md
+*.yml
+*.json
+*.css
+*.scss
+*.html
+npmcache/*
+webpack/*
+jest.config.js

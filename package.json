@@ -1,0 +1,132 @@
+{
+  "name": "react-typescript-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "watch:dev": "better-npm-run watch:dev",
+    "watch:prod": "better-npm-run watch:dev",
+    "build:dev": "better-npm-run build:dev",
+    "build:prod": "better-npm-run build:prod",
+    "test": "better-npm-run test",
+    "test:watch": "better-npm-run test:watch",
+    "lint": "tslint --project tsconfig.json",
+    "typecheck": "tsc --noEmit --skipLibCheck"
+  },
+  "betterScripts": {
+    "watch:dev": {
+      "command": "\"node_modules/.bin/webpack-dev-server\" --watch --progress --colors --config \"webpack/dev.config.ts\"",
+      "env": {
+        "NODE_ENV": "development",
+        "WATCH_MODE": true,
+        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+      }
+    },
+    "watch:prod": {
+      "command": "\"node_modules/.bin/webpack-dev-server\" --client-log-level info --watch --progress --colors --config webpack/prod.config.ts",
+      "env": {
+        "NODE_ENV": "production",
+        "WATCH_MODE": true,
+        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+      }
+    },
+    "build:dev": {
+      "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/dev.config.ts\"",
+      "env": {
+        "NODE_ENV": "development",
+        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+      }
+    },
+    "build:prod": {
+      "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/prod.config.ts\"",
+      "env": {
+        "NODE_ENV": "production",
+        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+      }
+    },
+    "test": {
+      "command": "\"node_modules/.bin/jest\"",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "test:watch": {
+      "command": "\"node_modules/.bin/jest\" --watch",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "dependencies": {
+    "deep-extend": "^0.6.0",
+    "lodash": "^4.17.15",
+    "react-dom": "^16.12.0",
+    "react": "^16.12.0",
+    "reselect": "^4.0.0",
+    "styled-components": "^4.4.1",
+    "typesafe-actions": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/runtime": "^7.7.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/circular-dependency-plugin": "^5.0.0",
+    "@types/copy-webpack-plugin": "^5.0.0",
+    "@types/deep-extend": "^0.4.31",
+    "@types/html-webpack-plugin": "^3.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/jest-in-case": "^1.0.1",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.13",
+    "@types/styled-components": "^4.4.0",
+    "@types/webpack": "^4.41.0",
+    "@types/webpack-dev-server": "^3.9.0",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.6",
+    "better-npm-run": "^0.1.1",
+    "circular-dependency-plugin": "^5.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.1.0",
+    "jest": "^24.5.0",
+    "jest-in-case": "^1.0.2",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react-hot-loader": "^4.12.18",
+    "react-svg-loader": "^3.0.3",
+    "react-test-renderer": "^16.12.0",
+    "rxjs-tslint-rules": "^4.26.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "testing-library": "^0.0.2",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-no-circular-imports": "^0.7.0",
+    "tslint-react": "^4.1.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
