@@ -1,11 +1,12 @@
 # React Typescript starter kit
-This project serves as a template for react applications using typescript, redux and redux-observables for side-effects.
+This project serves as a template for react applications using typescript. It provides basic folder structure for building React applications.
 
 - webpack is used for bundling (dev and prod builds supported)
 - jest is used for testing and code coverage
 - tslint is used for linting
 - CI with github actions
 - CSS in JS with styled-components or .scss for styling
+- side effects can be done any way, no opinions here
 
 # Quick start
 ```shell
