@@ -4,7 +4,6 @@
     "tslint-react",
     "tslint-config-prettier",
     "tslint-sonarts",
-    "rxjs-tslint-rules",
     "tslint-no-circular-imports"
   ],
   "rules": {
