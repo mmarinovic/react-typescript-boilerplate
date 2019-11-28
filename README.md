@@ -12,8 +12,8 @@ Project contains basic folder structure for building react applications. Check h
 
 # Quick start
 ```shell
-git clone https://github.com/mmarinovic/react-typescript-starter.git
-cd react-typescript-starter
+git clone https://github.com/mmarinovic/react-typescript-starter-slim.git
+cd react-typescript-starter-slim
 yarn install
 yarn watch:dev
 ```
