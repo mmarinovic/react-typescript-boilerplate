@@ -1,5 +1,5 @@
-# React Typescript starter kit
-This project serves as a template for react applications using typescript. It provides basic folder structure for building React applications.
+# React Typescript starter kit slim
+This project serves as a template for react applications using typescript. It provides basic folder structure for building react applications.
 
 - webpack is used for bundling (dev and prod builds supported)
 - jest is used for testing and code coverage
