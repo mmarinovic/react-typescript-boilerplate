@@ -8,6 +8,8 @@ This project serves as a template for react applications using typescript. It pr
 - CSS in JS with styled-components or .scss for styling
 - side effects can be done any way, no opinions here
 
+Project contains basic folder structure for building react applications. Check https://github.com/mmarinovic/react-typescript-starter for a bit more detailed starter.
+
 # Quick start
 ```shell
 git clone https://github.com/mmarinovic/react-typescript-starter.git
