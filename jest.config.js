@@ -13,7 +13,6 @@ module.exports = {
     "tsx",
     "js",
     "jsx",
-    "json"
   ],
   testPathIgnorePatterns: ["/node_modules/"],
   moduleDirectories: [
@@ -26,4 +25,6 @@ module.exports = {
   }
 };
 
-const mapFromRootDir = (path) => '<rootDir>/' + path;
+function mapFromRootDir(path) {
+  return '<rootDir>/' + path;
+}
