@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
     "@babel/runtime": "^7.7.6",
     "@testing-library/react": "^9.4.0",
     "@testing-library/react-hooks": "^3.2.1",
