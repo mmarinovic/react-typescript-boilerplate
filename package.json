@@ -58,12 +58,9 @@
   },
   "dependencies": {
     "deep-extend": "^0.6.0",
-    "lodash": "^4.17.15",
     "react-dom": "^16.12.0",
     "react": "^16.12.0",
-    "reselect": "^4.0.0",
-    "styled-components": "^4.4.1",
-    "typesafe-actions": "^5.1.0"
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
