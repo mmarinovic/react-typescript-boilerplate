@@ -21,7 +21,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     "\\.(scss)$": mapFromRootDir("src/helpers/test/mocks/scss_mock.js"),
-    "\\.(svg)$": mapFromRootDir("src/helpers/test/mocks/svg_mock.js"),
+    "\\.(svg|png|jpg)$": mapFromRootDir("src/helpers/test/mocks/file_mock.js"),
   }
 };
 

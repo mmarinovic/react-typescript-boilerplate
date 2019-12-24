@@ -54,19 +54,16 @@ export const commonRules: webpack.Rule[] = [
       ]),
   },
   {
-    test: /\.svg$/,
+    test: /\.(svg|png|jpe?g|gif)$/i,
     use: [
       {
-        loader: 'babel-loader'
-      },
-      {
-        loader: "react-svg-loader",
+        loader: 'url-loader',
         options: {
-          jsx: true
-        }
-      }
-    ]
-  }
+          limit: 8192,
+        },
+      },
+    ],
+  },
 ];
 
 export const commonConfig: webpack.Configuration = {
@@ -90,6 +87,7 @@ export const commonConfig: webpack.Configuration = {
   devServer: {
     hot,
     contentBase: path.resolve('..', 'build'),
-    clientLogLevel: 'error'
+    clientLogLevel: 'error',
+    historyApiFallback: true,
   },
 };
