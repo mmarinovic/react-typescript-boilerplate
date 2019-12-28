@@ -1,4 +1,4 @@
-# Simple React starter
+# Simple React starter kit
 This project serves as a template for react applications using typescript. It provides basic folder structure for building react applications.
 
 - webpack is used for bundling (dev and prod builds supported)

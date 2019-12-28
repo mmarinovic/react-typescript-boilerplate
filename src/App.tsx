@@ -1,7 +1,10 @@
 import React from 'react';
+import { ErrorBoundary } from 'shared/components/ErrorBoundary';
 
-const App = () => {
-  return <h1>App</h1>;
-};
+const App = () => (
+  <React.StrictMode>
+    <ErrorBoundary>Hi</ErrorBoundary>
+  </React.StrictMode>
+);
 
 export default App;
