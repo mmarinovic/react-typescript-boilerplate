@@ -4,6 +4,7 @@ import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 const hot = !!process.env.WATCH_MODE;
 const chunkName = process.env.NODE_ENV === 'production' ? 'id' : 'name';
@@ -12,6 +13,12 @@ const chunkHash = process.env.WATCH_MODE ? 'hash' : 'chunkhash';
 const moduleResolveDirectories = ['src', 'node_modules'];
 
 export const commonPlugins: webpack.Plugin[] = [
+  new BundleAnalyzerPlugin({
+    analyzerMode: 'static',
+    generateStatsFile: true,
+    openAnalyzer: false,
+    statsOptions: { source: false }
+  }),
   new CleanWebpackPlugin(),
   new webpack.HashedModuleIdsPlugin(),
   new CopyWebpackPlugin([
