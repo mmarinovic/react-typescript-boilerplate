@@ -27,5 +27,13 @@
   "include": [
     "src/**/*",
     "webpack/**/*"
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "target": "es5",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "module": "commonjs"
+    }
+  }
 }

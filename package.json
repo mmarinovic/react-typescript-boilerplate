@@ -18,30 +18,26 @@
       "command": "\"node_modules/.bin/webpack-dev-server\" --watch --progress --colors --config \"webpack/dev.config.ts\"",
       "env": {
         "NODE_ENV": "development",
-        "WATCH_MODE": true,
-        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+        "WATCH_MODE": true
       }
     },
     "watch:prod": {
       "command": "\"node_modules/.bin/webpack-dev-server\" --client-log-level info --watch --progress --colors --config webpack/prod.config.ts",
       "env": {
         "NODE_ENV": "production",
-        "WATCH_MODE": true,
-        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+        "WATCH_MODE": true
       }
     },
     "build:dev": {
       "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/dev.config.ts\"",
       "env": {
-        "NODE_ENV": "development",
-        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+        "NODE_ENV": "development"
       }
     },
     "build:prod": {
       "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/prod.config.ts\"",
       "env": {
-        "NODE_ENV": "production",
-        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}"
+        "NODE_ENV": "production"
       }
     },
     "test": {
