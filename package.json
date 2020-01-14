@@ -100,7 +100,7 @@
     "testing-library": "^0.0.2",
     "ts-jest": "^24.3.0",
     "ts-loader": "^6.2.1",
-    "ts-node": "^8.6.1",
+    "ts-node": "^8.6.2",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-no-circular-imports": "^0.7.0",
