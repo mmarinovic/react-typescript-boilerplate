@@ -23,6 +23,7 @@ export const commonPlugins: webpack.Plugin[] = [
   new webpack.HashedModuleIdsPlugin(),
   new CopyWebpackPlugin([
     { context: 'assets/', from: '*/**/*', to: '.' },
+    { context: 'assets/', from: '*', to: '.' },
   ]),
   new HtmlWebpackPlugin({
     filename: 'index.html',
