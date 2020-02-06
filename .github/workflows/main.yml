@@ -19,16 +19,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: |
-        npm install
+        yarn install
     - name: Type check
       run: |
-        npm run typecheck
+        yarn typecheck
     - name: Lint
       run: |
-        npm run lint
+        yarn lint
     - name: Build
       run: |
-        npm run build:prod
+        yarn build:prod
     - name: Test
       run: |
-        npm run test
+        yarn test
