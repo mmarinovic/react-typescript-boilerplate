@@ -11,7 +11,7 @@
     "watch:test": "better-npm-run watch:test",
     "lint": "tslint --project tsconfig.json",
     "typecheck": "tsc --noEmit --skipLibCheck",
-    "bundle:report": "better-npm-run build:prod && webpack-bundle-analyzer webpack/dist/stats.json"
+    "bundle:analyze": "better-npm-run build:analyze && webpack-bundle-analyzer webpack/dist/stats.json"
   },
   "betterScripts": {
     "watch:dev": {
@@ -36,6 +36,12 @@
     },
     "build:prod": {
       "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/prod.config.ts\"",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "build:analyze": {
+      "command": "\"node_modules/.bin/webpack\" --progress --colors --config \"webpack/analyze.config.ts\"",
       "env": {
         "NODE_ENV": "production"
       }

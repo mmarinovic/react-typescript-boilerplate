@@ -4,7 +4,6 @@ import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 const hot = !!process.env.WATCH_MODE;
 const chunkName = process.env.NODE_ENV === 'production' ? 'id' : 'name';
@@ -12,13 +11,7 @@ const chunkHash = process.env.WATCH_MODE ? 'hash' : 'chunkhash';
 
 const moduleResolveDirectories = ['src', 'node_modules'];
 
-export const commonPlugins: webpack.Plugin[] = [
-  new BundleAnalyzerPlugin({
-    analyzerMode: 'disabled',
-    generateStatsFile: true,
-    openAnalyzer: false,
-    statsOptions: { source: false }
-  }),
+const commonPlugins: webpack.Plugin[] = [
   new CleanWebpackPlugin(),
   new webpack.HashedModuleIdsPlugin(),
   new CopyWebpackPlugin([
@@ -34,7 +27,7 @@ export const commonPlugins: webpack.Plugin[] = [
   }),
 ];
 
-export const commonRules: webpack.Rule[] = [
+const commonRules: webpack.Rule[] = [
   {
     test: /\.css$/,
     use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }],
@@ -74,7 +67,7 @@ export const commonRules: webpack.Rule[] = [
   },
 ];
 
-export const commonConfig: webpack.Configuration = {
+const commonConfig: webpack.Configuration = {
   target: 'web',
   context: path.resolve(__dirname, '..', 'src'),
   output: {
@@ -99,3 +92,5 @@ export const commonConfig: webpack.Configuration = {
     historyApiFallback: true,
   },
 };
+
+export { commonPlugins, commonRules, commonConfig }
