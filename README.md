@@ -62,3 +62,9 @@ Runs type checker. You can add this to husky pre-commit hook as well.
 ```Shell
 yarn typecheck
 ```
+
+## Bundle analyze
+Runs webpack bundle analyer.
+```Shell
+yarn bundle:analyze
+```
