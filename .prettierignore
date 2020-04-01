@@ -1,6 +1,2 @@
 *.json
-*.css
-*.scss
-*.html
-webpack/*
 jest.config.js
