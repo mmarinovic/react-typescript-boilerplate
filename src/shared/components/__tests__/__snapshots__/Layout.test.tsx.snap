@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should match a snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      I'm in layout
+    </h1>
+  </div>
+</div>
+`;
