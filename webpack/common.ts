@@ -8,7 +8,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 const hot = !!process.env.WATCH_MODE;
 const chunkName = process.env.NODE_ENV === 'production' ? 'id' : 'name';
 const chunkHash = process.env.WATCH_MODE ? 'hash' : 'chunkhash';
-
+console.log(process.env.WATCH_MODE, process.env.NODE_ENV);
 const moduleResolveDirectories = ['src', 'node_modules'];
 
 const commonPlugins: webpack.Plugin[] = [
@@ -20,7 +20,7 @@ const commonPlugins: webpack.Plugin[] = [
   ]),
   new HtmlWebpackPlugin({
     filename: 'index.html',
-    template: 'assets/index.html'
+    template: 'assets/index.html',
   }),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -30,29 +30,33 @@ const commonPlugins: webpack.Plugin[] = [
 const commonRules: webpack.Rule[] = [
   {
     test: /\.css$/,
-    use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }],
+    use: [
+      'style-loader',
+      { loader: 'css-loader', options: { importLoaders: 1 } },
+    ],
   },
   {
     test: /\.scss$/,
     loaders: [
       'style-loader',
       { loader: 'css-loader', options: { importLoaders: 1 } },
-      { loader: 'sass-loader', options: { sassOptions: { includePaths: moduleResolveDirectories } } } 
+      {
+        loader: 'sass-loader',
+        options: { sassOptions: { includePaths: moduleResolveDirectories } },
+      },
     ],
   },
   {
     test: /\.(ts|tsx)$/,
     // tslint:disable-next-line: no-any
-    use: ([] as any[])
-      .concat(hot ? 'react-hot-loader/webpack' : [])
-      .concat([
-        {
-          loader: 'ts-loader',
-          options: {
-            logLevel: 'error',
-          },
+    use: ([] as any[]).concat(hot ? 'react-hot-loader/webpack' : []).concat([
+      {
+        loader: 'ts-loader',
+        options: {
+          logLevel: 'error',
         },
-      ]),
+      },
+    ]),
   },
   {
     test: /\.(svg|png|jpe?g|gif)$/i,
@@ -93,4 +97,4 @@ const commonConfig: webpack.Configuration = {
   },
 };
 
-export { commonPlugins, commonRules, commonConfig }
+export { commonPlugins, commonRules, commonConfig };

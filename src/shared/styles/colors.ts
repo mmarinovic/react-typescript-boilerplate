@@ -1,5 +1,3 @@
-const colors = {
-  primary: '#FF4A1A',
-};
+const colors = {};
 
 export default colors;
