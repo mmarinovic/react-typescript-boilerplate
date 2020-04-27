@@ -8,7 +8,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 const hot = !!process.env.WATCH_MODE;
 const chunkName = process.env.NODE_ENV === 'production' ? 'id' : 'name';
 const chunkHash = process.env.WATCH_MODE ? 'hash' : 'chunkhash';
-console.log(process.env.WATCH_MODE, process.env.NODE_ENV);
+
 const moduleResolveDirectories = ['src', 'node_modules'];
 
 const commonPlugins: webpack.Plugin[] = [
