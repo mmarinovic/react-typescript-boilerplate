@@ -1,17 +1,15 @@
-# React typescript starter kit
+# React typescript boilerplate
 This project serves as a template for react applications using typescript. It provides basic folder structure for building react applications.
 
 - webpack is used for bundling (dev and prod builds supported)
 - jest is used for testing and code coverage
 - tslint is used for linting
 - CI with github actions
-- CSS in JS with styled-components or .scss for styling
-- side effects can be done any way, no opinions here
 
 # Quick start
 ```shell
-git clone https://github.com/mmarinovic/react-typescript-starter-kit.git
-cd react-typescript-starter-kit
+git clone https://github.com/mmarinovic/react-typescript-boilerplate.git
+cd react-typescript-boilerplate
 yarn install
 yarn watch:dev
 ```
