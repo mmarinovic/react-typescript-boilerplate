@@ -1,8 +1,5 @@
-import useConfig from '../useConfig';
+import Config from 'config';
 
-const useSiteMetaData = () => {
-  const { meta } = useConfig();
-  return meta;
-};
+const useSiteMetaData = () => Config.getInstance().getSiteMeta();
 
 export default useSiteMetaData;

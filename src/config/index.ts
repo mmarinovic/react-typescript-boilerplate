@@ -1,17 +1,40 @@
 import deepExtend from 'deep-extend';
 import common from './common';
 import test from './environments/test-env';
+import { IConfig } from 'shared/types/config';
 
-const getConfig = () => {
-  const config: Record<string, unknown> = {
-    test,
-  };
+class Config {
+  private static instance: Config;
+  private config: IConfig;
 
-  if (!process.env.NODE_ENV) {
-    throw new Error('process.env.NODE_ENV not found');
+  constructor() {
+    this.config = this.loadConfig();
   }
 
-  return deepExtend(common, config[process.env.NODE_ENV]);
-};
+  public static getInstance(): Config {
+    Config.instance = Config.instance || new Config();
+    return Config.instance;
+  }
 
-export { getConfig };
+  public getApi() {
+    return this.config.api;
+  }
+
+  public getSiteMeta() {
+    return this.config.meta;
+  }
+
+  private loadConfig() {
+    const envConfigs: Record<string, IConfig> = {
+      test,
+    };
+
+    if (!process.env.NODE_ENV) {
+      throw new Error('process.env.NODE_ENV not found');
+    }
+
+    return deepExtend(common, envConfigs[process.env.NODE_ENV]);
+  }
+}
+
+export default Config;
