@@ -38,7 +38,7 @@
     "@types/react-helmet": "^6.0.0",
     "@types/webpack": "^4.41.13",
     "@types/webpack-bundle-analyzer": "^3.8.0",
-    "@types/webpack-dev-server": "^3.10.1",
+    "@types/webpack-dev-server": "^3.11.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "circular-dependency-plugin": "^5.2.0",
