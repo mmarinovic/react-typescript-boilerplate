@@ -18,7 +18,7 @@
     "deep-extend": "^0.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
