@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@reach/router": "^1.3.3",
+    "@reach/router": "^1.3.4",
     "axios": "^0.19.2",
     "deep-extend": "^0.6.0",
     "react": "^16.13.1",
