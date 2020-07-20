@@ -61,7 +61,7 @@
     "style-loader": "^1.2.1",
     "testing-library": "^0.0.2",
     "ts-jest": "^25.5.1",
-    "ts-loader": "^8.0.0",
+    "ts-loader": "^8.0.1",
     "ts-node": "^8.10.2",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
