@@ -68,7 +68,7 @@
     "tslint-no-circular-imports": "^0.7.0",
     "tslint-react": "^4.2.0",
     "tslint-sonarts": "^1.9.0",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
