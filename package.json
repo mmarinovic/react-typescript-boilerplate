@@ -59,7 +59,7 @@
     "react-hot-loader": "^4.13.0",
     "react-test-renderer": "^16.13.1",
     "sass-loader": "^10.0.3",
-    "style-loader": "^1.2.1",
+    "style-loader": "^2.0.0",
     "testing-library": "^0.0.2",
     "ts-jest": "^25.5.1",
     "ts-loader": "^8.0.4",
